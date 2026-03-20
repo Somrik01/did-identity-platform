@@ -1,35 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaWallet, FaIdCard, FaShareAlt } from "react-icons/fa";
+
 import CreateDID from "./CreateDID";
 import ViewCredential from "./ViewCredential";
 import ShareCredential from "./ShareCredential";
 
-function WalletPage(){
+function WalletPage() {
+  return (
+    <motion.div
+      className="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
 
-  return(
+      <h2><FaWallet /> User Wallet</h2>
 
-    <div className="container">
+      <motion.div className="card" whileHover={{ scale: 1.03 }}>
+        <h4><FaIdCard /> Create DID</h4>
+        <CreateDID />
+      </motion.div>
 
-      <h2 className="mb-4">User Wallet</h2>
+      <motion.div className="card" whileHover={{ scale: 1.03 }}>
+        <h4><FaIdCard /> My Credentials</h4>
+        <ViewCredential />
+      </motion.div>
 
-      <div className="card p-4 mb-4 wallet-card">
-        <h4 className="mb-2"> </h4>
-        <CreateDID/>
-      </div>
+      <motion.div className="card" whileHover={{ scale: 1.03 }}>
+        <h4><FaShareAlt /> Share Credential</h4>
+        <ShareCredential />
+      </motion.div>
 
-      <div className="card p-4 mb-4 wallet-card">
-        <h4 className="mb-2"> </h4>
-        <ViewCredential/>
-      </div>
-
-      <div className="card p-4 wallet-card">
-        <h4 className="mb-2"> </h4>
-        <ShareCredential/>
-      </div>
-
-    </div>
-
+    </motion.div>
   );
-
 }
 
 export default WalletPage;

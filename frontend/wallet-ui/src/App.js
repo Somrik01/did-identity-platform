@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles.css";
 
 import HomePage from "./components/HomePage";
@@ -72,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 

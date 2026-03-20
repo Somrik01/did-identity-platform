@@ -2,75 +2,53 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function IssuerPage() {
-
   const [holder, setHolder] = useState("");
   const [name, setName] = useState("");
   const [degree, setDegree] = useState("");
   const [response, setResponse] = useState(null);
 
   const issueCredential = async () => {
-
-    const res = await axios.post("http://localhost:5000/issueCredential",{
+    const res = await axios.post("http://localhost:5000/issueCredential", {
       issuer: "University",
-      holder: holder,
+      holder,
       type: "Degree",
-      data: {
-        name: name,
-        degree: degree
-      }
+      data: { name, degree }
     });
 
     setResponse(res.data);
   };
 
   return (
-
     <div className="container">
 
-      <h2 className="mb-4">University Issuer Portal</h2>
+      <h2>University Issuer Portal</h2>
 
-      <div className="card p-4">
+      <div className="card">
 
-        <div className="mb-3">
-          <label className="form-label">Student DID</label>
-          <input
-            className="form-control"
-            placeholder="did:example:123"
-            onChange={(e)=>setHolder(e.target.value)}
-          />
-        </div>
+        <label>Student DID</label>
+        <input
+          placeholder="did:example:123"
+          onChange={(e) => setHolder(e.target.value)}
+        />
 
-        <div className="mb-3">
-          <label className="form-label">Student Name</label>
-          <input
-            className="form-control"
-            placeholder="Student Name"
-            onChange={(e)=>setName(e.target.value)}
-          />
-        </div>
+        <label>Student Name</label>
+        <input
+          placeholder="Student Name"
+          onChange={(e) => setName(e.target.value)}
+        />
 
-        <div className="mb-3">
-          <label className="form-label">Degree</label>
-          <input
-            className="form-control"
-            placeholder="B.Tech Computer Science"
-            onChange={(e)=>setDegree(e.target.value)}
-          />
-        </div>
+        <label>Degree</label>
+        <input
+          placeholder="B.Tech Computer Science"
+          onChange={(e) => setDegree(e.target.value)}
+        />
 
-        <button
-          className="btn btn-primary"
-          onClick={issueCredential}
-        >
+        <button onClick={issueCredential}>
           Issue Credential
         </button>
 
-        <br/><br/>
-
         {response && (
-          <div className="alert alert-success">
-            <pre>{JSON.stringify(response,null,2)}</pre>
-          </div>
+          <pre>{JSON.stringify(response, null, 2)}</pre>
         )}
 
       </div>

@@ -1,36 +1,30 @@
 import React from "react";
 
-function SecurityDashboard(){
-
-  return(
-
+function SecurityDashboard() {
+  return (
     <div className="container">
 
-      <h2 className="mb-4">Security Monitoring</h2>
+      <h2>Security Monitoring</h2>
 
-      <div className="card p-4">
+      <div className="card">
 
         <p>
-          AI system monitors credential verification activity
-          and detects anomalies in the network.
+          AI system monitors credential activity and detects anomalies.
         </p>
 
-        <hr/>
-
         <ul>
-          <li>Verification logs stored in database</li>
-          <li>Machine learning anomaly detection</li>
-          <li>Suspicious credential behavior tracking</li>
+          <li>Verification logs stored</li>
+          <li>Isolation Forest model</li>
+          <li>Suspicious activity detection</li>
         </ul>
 
-        <div className="alert alert-warning mt-3">
-          Run the AI engine in the <b>ai-engine</b> folder to analyze logs.
-        </div>
+        <p style={{ marginTop: "15px", color: "#facc15" }}>
+          Run AI engine in <b>ai-engine</b> folder.
+        </p>
 
       </div>
 
     </div>
-
   );
 }
 

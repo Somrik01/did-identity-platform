@@ -1,53 +1,33 @@
 import React from "react";
 
 function HomePage() {
-
   return (
+    <div className="hero">
 
-    <div className="container">
+      <h1>Decentralized Identity Platform</h1>
+      <p>Secure. Verifiable. Future-ready digital identity system.</p>
 
-      <div className="card p-5 text-center">
+      <div className="grid">
 
-        <h2 className="mb-3">Decentralized Identity Verification</h2>
+        <div className="card">
+          <h3>🔐 Blockchain DID</h3>
+          <p>Own your digital identity securely.</p>
+        </div>
 
-        <p>
-          This platform provides secure digital identity using modern
-          decentralized technologies.
-        </p>
+        <div className="card">
+          <h3>📜 Credentials</h3>
+          <p>Issue and verify academic credentials.</p>
+        </div>
 
-        <hr/>
-
-        <div className="row mt-4">
-
-          <div className="col-md-4">
-            <div className="card p-3">
-              <h5>Blockchain DID</h5>
-              <p>Decentralized Identity for secure digital ownership.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="card p-3">
-              <h5>Credential Verification</h5>
-              <p>Issue and verify academic or professional credentials.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="card p-3">
-              <h5>AI Security</h5>
-              <p>Anomaly detection using machine learning.</p>
-            </div>
-          </div>
-
+        <div className="card">
+          <h3>🤖 AI Security</h3>
+          <p>Detect anomalies using machine learning.</p>
         </div>
 
       </div>
 
     </div>
-
   );
-
 }
 
 export default HomePage;
