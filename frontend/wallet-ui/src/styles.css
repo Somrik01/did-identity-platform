@@ -13,24 +13,62 @@ body {
 }
 
 /* NAVBAR */
-nav {
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-  background: #020617;
-  border-bottom: 1px solid #1f2937;
+  padding: 18px 60px;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav a {
-  margin-left: 20px;
+/* LOGO */
+.nav-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.5px;
+}
+
+/* NAV LINKS CONTAINER */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* LINKS */
+.nav-links a {
   text-decoration: none;
-  color: #9ca3af;
-  font-size: 14px;
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #ffffff;
+/* HOVER EFFECT (underline animation) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* PAGE CONTAINER */

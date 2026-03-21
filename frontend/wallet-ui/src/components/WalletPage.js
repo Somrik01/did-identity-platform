@@ -17,17 +17,17 @@ function WalletPage() {
       <h2><FaWallet /> User Wallet</h2>
 
       <motion.div className="card" whileHover={{ scale: 1.03 }}>
-        <h4><FaIdCard /> Create DID</h4>
+        <h4><FaIdCard /> </h4>
         <CreateDID />
       </motion.div>
 
       <motion.div className="card" whileHover={{ scale: 1.03 }}>
-        <h4><FaIdCard /> My Credentials</h4>
+        <h4><FaIdCard /> </h4>
         <ViewCredential />
       </motion.div>
 
       <motion.div className="card" whileHover={{ scale: 1.03 }}>
-        <h4><FaShareAlt /> Share Credential</h4>
+        <h4><FaShareAlt />  </h4>
         <ShareCredential />
       </motion.div>
 

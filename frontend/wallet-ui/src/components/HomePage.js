@@ -5,7 +5,6 @@ function HomePage() {
     <div className="hero">
 
       <h1>Decentralized Identity Platform</h1>
-      <p>Secure. Verifiable. Future-ready digital identity system.</p>
 
       <div className="grid">
 

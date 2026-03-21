@@ -14,39 +14,17 @@ function App() {
     <Router>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container">
+      <nav className="navbar">
+  <div className="nav-logo">DID Identity Platform</div>
 
-          <Link className="navbar-brand fw-bold" to="/">
-            DID Identity Platform
-          </Link>
-
-          <div className="navbar-nav">
-
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-
-            <Link className="nav-link" to="/wallet">
-              Wallet
-            </Link>
-
-            <Link className="nav-link" to="/issuer">
-              Issuer
-            </Link>
-
-            <Link className="nav-link" to="/verify">
-              Verifier
-            </Link>
-
-            <Link className="nav-link" to="/security">
-              Security
-            </Link>
-
-          </div>
-
-        </div>
-      </nav>
+  <div className="nav-links">
+    <Link to="/">Home</Link>
+    <Link to="/wallet">Wallet</Link>
+    <Link to="/issuer">Issuer</Link>
+    <Link to="/verify">Verifier</Link>
+    <Link to="/security">Security</Link>
+  </div>
+</nav>
 
       {/* Page Content */}
       <div className="container mt-5">
