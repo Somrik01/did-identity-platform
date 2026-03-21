@@ -7,7 +7,7 @@ function VerifierPage() {
 
   const verifyCredential = async () => {
     const res = await axios.get(
-      `http://localhost:5000/verifyCredential/${id}`
+      `https://did-identity-platform.onrender.com/verifyCredential/${id}`
     );
     setResult(res.data);
   };

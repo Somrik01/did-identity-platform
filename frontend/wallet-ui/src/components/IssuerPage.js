@@ -8,7 +8,7 @@ function IssuerPage() {
   const [response, setResponse] = useState(null);
 
   const issueCredential = async () => {
-    const res = await axios.post("http://localhost:5000/issueCredential", {
+    const res = await axios.post("https://did-identity-platform.onrender.com/issueCredential", {
       issuer: "University",
       holder,
       type: "Degree",

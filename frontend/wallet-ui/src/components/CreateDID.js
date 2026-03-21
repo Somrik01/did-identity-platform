@@ -6,7 +6,7 @@ function CreateDID() {
   const [didData, setDidData] = useState(null);
 
   const createDID = async () => {
-    const res = await axios.post("http://localhost:5000/createDID");
+    const res = await axios.post("https://did-identity-platform.onrender.com/createDID");
     setDidData(res.data);
   };
 

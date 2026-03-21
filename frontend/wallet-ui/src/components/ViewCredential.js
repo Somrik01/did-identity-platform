@@ -9,7 +9,7 @@ function ViewCredential() {
   const fetchCredentials = async () => {
 
     const res = await axios.get(
-      `http://localhost:5000/credentials/${did}`
+      `https://did-identity-platform.onrender.com/credentials/${did}`
     );
 
     setCredentials(res.data);
@@ -18,7 +18,7 @@ function ViewCredential() {
   const revokeCredential = async (id) => {
 
     await axios.post(
-      `http://localhost:5000/revokeCredential/${id}`
+      `https://did-identity-platform.onrender.com/revokeCredential/${id}`
     );
 
     alert("Credential Revoked");
