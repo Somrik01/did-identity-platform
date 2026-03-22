@@ -5,15 +5,12 @@ const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-const cors = require("cors");
-
 app.use(cors({
   origin: "*",   // allow all (for now)
   methods: ["GET", "POST"],
   credentials: true
 }));
+app.use(express.json());
 
 /* ---------------------------
    MongoDB Connection
