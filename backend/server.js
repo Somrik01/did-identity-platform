@@ -159,9 +159,7 @@ app.post("/issueCredential", async (req, res) => {
     });
 
   } catch (error) {
-
-    console.log(error);
-
+    console.error("ERROR:", error);
     res.status(500).json({
       message: "Error issuing credential"
     });
