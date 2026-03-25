@@ -99,6 +99,11 @@ app.post("/createDID", async (req, res) => {
 
 });
 
+app.get("/", (req, res) => {
+  res.send("DID Backend is running 🚀");
+});
+
+
 /* ---------------------------
    RESOLVE DID
 ----------------------------*/
